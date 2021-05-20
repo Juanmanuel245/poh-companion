@@ -46,7 +46,6 @@ export const DashboardScreen = () => {
     async function getCoinsPrices() {
         const resp = await coinsPrices();
         const body = await resp.json();
-        console.log('Result: ', );
         setBitcoinPrice(body.bitcoin.usd);
         setEthereumPrice(body.ethereum.usd);
         setUbiPrice(body['universal-basic-income'].usd);
@@ -63,7 +62,7 @@ export const DashboardScreen = () => {
                 </div>
                 <div className="col-xs-12 col-md-4 col-md-4">
                     <div className="card">
-                    <i class="fab fa-bitcoin fa-5x mt-3"></i>
+                    <i className="fab fa-bitcoin fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">Bitcoin (BTC)</h5>
                             <p className="card-text">U$S { bitcoinPrice }</p>
@@ -73,7 +72,7 @@ export const DashboardScreen = () => {
 
                 <div className="col-xs-12 col-md-4 col-md-4">
                     <div className="card">
-                    <i class="fab fa-ethereum fa-5x mt-3"></i>
+                    <i className="fab fa-ethereum fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">Ethereum (ETH)</h5>
                             <p className="card-text">U$S { ethereumPrice }</p>
@@ -83,7 +82,7 @@ export const DashboardScreen = () => {
 
                 <div className="col-xs-12 col-md-4 col-md-4">
                     <div className="card">
-                    <i class="fas fa-universal-access fa-5x mt-3"></i>
+                    <i className="fas fa-universal-access fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">UBI</h5>
                             <p className="card-text">U$S { ubiPrice }</p>
@@ -137,8 +136,8 @@ export const DashboardScreen = () => {
                     </div>
                 </div>
                 <div className="col-xs-12 col-md-12 col-md-12 mt-4">
-                    <div class="card">
-                        <div class="card-body"> Los valores se actualizan automaticamente cada 8 segundos </div>
+                    <div className="card">
+                        <div className="card-body"> Los valores se actualizan automaticamente cada 8 segundos </div>
                     </div>
                 </div>
             </div>

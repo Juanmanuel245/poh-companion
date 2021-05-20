@@ -1,0 +1,16 @@
+.background-nav {
+    background: rgb(255,186,121);
+    background: linear-gradient(90deg, rgba(255,186,121,1) 29%, rgba(253,202,211,1) 100%);
+}
+
+.nav-options {
+    font-weight: bold;
+    font-size: large;
+}
+
+
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    justify-content: space-around;
+    flex-basis: auto;
+    }

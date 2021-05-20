@@ -19,12 +19,9 @@ export const GascalculatorScreen = () => {
       }, []);
 
     return (
-        <div>
-            <section>
-                <div><span>Rapid:</span><b> { gasFastPrice } </b></div>
-                <div><span>Fast:</span><b> { gasRapidPrice } </b></div>
-                <div><span>Low:</span><b> { gasLowPrice } </b></div>
-            </section>
+        <div className="text-center">
+            <h2>Calculo de gastos para registro</h2>
+            <h6>En construcción...</h6>
 </div>
 
     )

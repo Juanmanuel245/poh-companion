@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // import { ProgressBar } from 'react-bootstrap';
 import { coinsPrices } from '../../helpers/fetch';
+import './dashboard.css';
 
 export const DashboardScreen = () => {
 
@@ -106,7 +107,7 @@ export const DashboardScreen = () => {
                     </div>
                 </div>
 
-                <div className="col-xs-12 col-md-3 col-md-3">
+                <div className="col-xs-12 col-md-3 col-md-3 ">
                     <div className="card">
                         <i className="fas fa-fighter-jet fa-5x mt-3"></i>
                         <div className="card-body">
@@ -118,7 +119,7 @@ export const DashboardScreen = () => {
 
                 <div className="col-xs-12 col-md-3 col-md-3">
                     <div className="card">
-                        <i className="fas fa-tachometer-alt fa-5x mt-3"></i>
+                        <i className="fas fa-car-alt fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">Normal</h5>
                             <p className="card-text">{ gasNormalPrice }</p>
@@ -128,7 +129,7 @@ export const DashboardScreen = () => {
 
                 <div className="col-xs-12 col-md-3 col-md-3">
                     <div className="card">
-                        <i className="fas fa-couch fa-5x mt-3"></i>
+                        <i className="fas fa-biking fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">Lento</h5>
                             <p className="card-text">{ gasLowPrice }</p>
@@ -141,8 +142,6 @@ export const DashboardScreen = () => {
                     </div>
                 </div>
             </div>
-
-            
         </div>
 
     )

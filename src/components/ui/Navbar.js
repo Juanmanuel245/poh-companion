@@ -12,8 +12,11 @@ export const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ">
-                    {/* <li className="nav-item nav-options"><a className="nav-link active text-white" aria-current="page" href="#">Inicio</a></li>
-                    <li className="nav-item nav-options"><a className="nav-link text-white" href="#">Features</a></li> */}
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/">Inicio</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="community">Comunidad</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/vote">Votaciones</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/profile-check">Verificación de perfil</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/gas-calculator">Calculador de costos</a></li>
                 </ul>
                 </div>
             </div>

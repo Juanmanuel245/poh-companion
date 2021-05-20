@@ -1,22 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import { gasPrices } from '../../helpers/fetch';
+import React from 'react'
+// import { gasPrices } from '../../helpers/fetch';
 
 export const GascalculatorScreen = () => {
 
-    const [gasFastPrice, setGasFastPrice] = useState([]);
-    const [gasRapidPrice, setGasRapidPrice] = useState([]);
-    const [gasLowPrice, setGasLowPrice] = useState([]);
+    // const [gasFastPrice, setGasFastPrice] = useState([]);
+    // const [gasRapidPrice, setGasRapidPrice] = useState([]);
+    // const [gasLowPrice, setGasLowPrice] = useState([]);
 
-    useEffect(() => {
-        async function getGasPrices() {
-            const resp = await gasPrices();
-            const body = await resp.json();
-            setGasRapidPrice(body.result.FastGasPrice);
-            setGasFastPrice(body.result.ProposeGasPrice);
-            setGasLowPrice(body.result.SafeGasPrice);
-        }
-        getGasPrices();
-      }, []);
+    // useEffect(() => {
+    //     async function getGasPrices() {
+    //         const resp = await gasPrices();
+    //         const body = await resp.json();
+    //         setGasRapidPrice(body.result.FastGasPrice);
+    //         setGasFastPrice(body.result.ProposeGasPrice);
+    //         setGasLowPrice(body.result.SafeGasPrice);
+    //     }
+    //     getGasPrices();
+    //   }, []);
 
     return (
         <div className="text-center">

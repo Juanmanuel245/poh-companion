@@ -2,8 +2,11 @@ import React, { useEffect, useState } from 'react';
 // import { ProgressBar } from 'react-bootstrap';
 import { coinsPrices } from '../../helpers/fetch';
 import './dashboard.css';
+import ReactGA from 'react-ga';
 
 export const DashboardScreen = () => {
+
+    useEffect(() => {ReactGA.pageview('/homepage');}, [])
 
     let wsObj;
     let wsUrl = 'wss://www.gasnow.org/ws';

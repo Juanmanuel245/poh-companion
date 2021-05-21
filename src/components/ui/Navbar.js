@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './navbar.css';    
+import ReactGA from 'react-ga';
 
 export const Navbar = () => {
+
+    useEffect(() => {ReactGA.initialize('G-T6BJMT0X89');}, []);
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light background-nav navbar-expand-lg">

@@ -1,4 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react';
+import ReactGA from 'react-ga';
+
+
 // import { gasPrices } from '../../helpers/fetch';
 
 export const GascalculatorScreen = () => {

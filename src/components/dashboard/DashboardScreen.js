@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-// import { ProgressBar } from 'react-bootstrap';
 import { coinsPrices } from '../../helpers/fetch';
 import './dashboard.css';
 import ReactGA from 'react-ga';

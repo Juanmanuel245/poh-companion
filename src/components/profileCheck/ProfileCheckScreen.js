@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import ReactGA from 'react-ga';
 import './profileCheck.css';
+
 
 export const ProfileCheckScreen = () => {
 
@@ -18,13 +20,13 @@ export const ProfileCheckScreen = () => {
         if(tam <= 7){
             setSize({size: tam, icon: 'far fa-thumbs-up text-success', text: '¡Tamaño correcto!' });
         }else{
-            setSize({size: tam, icon: 'far fa-thumbs-down', text: '¡Tamaño incorrecto! Maximo 7 Megas.' });
+            setSize({size: tam, icon: 'far fa-thumbs-down text-danger', text: '¡Tamaño incorrecto! Maximo 7 Megas.' });
         }
 
         if(e.target.files[0].type === 'video/mp4' || e.target.files[0].type === 'video/webm'){
             setType({size: tam, icon: 'far fa-thumbs-up text-success', text: '¡Formato correcto!' });
         }else{
-            setType({size: tam, icon: 'far fa-thumbs-down', text: '¡Formato incorrecto! El video debe ser mp4 o webm' });
+            setType({size: tam, icon: 'far fa-thumbs-down text-danger', text: '¡Formato incorrecto! El video debe ser mp4 o webm' });
         }
     };
 

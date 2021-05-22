@@ -3,6 +3,8 @@ import './profileCheck.css';
 
 export const ProfileCheckScreen = () => {
 
+    useEffect(() => {ReactGA.pageview('/profile-check');}, [])
+
     const [video, setVideo] = useState();
     const [type, setType] = useState();
     const [size, setSize] = useState();

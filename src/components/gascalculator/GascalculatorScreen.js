@@ -3,6 +3,9 @@ import React from 'react'
 
 export const GascalculatorScreen = () => {
 
+    useEffect(() => {ReactGA.pageview('/gas-calculator');}, [])
+
+
     // const [gasFastPrice, setGasFastPrice] = useState([]);
     // const [gasRapidPrice, setGasRapidPrice] = useState([]);
     // const [gasLowPrice, setGasLowPrice] = useState([]);

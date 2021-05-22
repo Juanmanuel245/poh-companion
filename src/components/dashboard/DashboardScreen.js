@@ -6,7 +6,7 @@ import ReactGA from 'react-ga';
 
 export const DashboardScreen = () => {
 
-    useEffect(() => {ReactGA.pageview('/homepage');}, [])
+    useEffect(() => {ReactGA.pageview('/');}, [])
 
     let wsObj;
     let wsUrl = 'wss://www.gasnow.org/ws';

@@ -4,7 +4,7 @@ import ReactGA from 'react-ga';
 
 export const Navbar = () => {
 
-    useEffect(() => {ReactGA.initialize('G-T6BJMT0X89');}, []);
+    useEffect(() => {ReactGA.initialize('UA-197549218-1');}, []);
 
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light background-nav navbar-expand-lg">

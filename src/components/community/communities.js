@@ -18,6 +18,12 @@ export const Communities = [
         logo: pohNoImage
     },
     {
+        name : 'Proof of humanity - Ingles',
+        desc: 'Grupo principal en ingles',
+        link: 'https://t.me/proofhumanity',
+        logo: logoPoeEsp
+    },
+    {
         name : 'Proof of humanity - Español',
         desc: 'Grupo principal en español',
         link: 'https://t.me/proofofhumanityenespanol',

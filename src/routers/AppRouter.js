@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Switch, Redirect } from "react-router-dom";
 import { CommunityScreen } from '../components/community/CommunityScreen';
 import { DashboardScreen } from '../components/dashboard/DashboardScreen';
 import { GascalculatorScreen } from '../components/gascalculator/GascalculatorScreen';
+import { LinkAddressScreen } from '../components/linkadress/LinkAddressScreen';
 import { ProfileCheckScreen } from '../components/profileCheck/ProfileCheckScreen';
 import { VoteScreen } from '../components/vote/VoteScreen';
 import { PublicRoute } from './PublicRoute';
@@ -18,6 +19,7 @@ export const AppRouter = () => {
                     <PublicRoute exact path="/vote" isAuthenticated={ false } component={ VoteScreen } />
                     <PublicRoute exact path="/profile-check" isAuthenticated={ false } component={ ProfileCheckScreen } />
                     <PublicRoute exact path="/gas-calculator" isAuthenticated={ false } component={ GascalculatorScreen } />
+                    <PublicRoute exact path="/link-address" isAuthenticated={ false } component={ LinkAddressScreen } />
                     <Redirect to="/" />
                 </Switch>
             </div>

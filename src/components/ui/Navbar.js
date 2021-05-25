@@ -20,6 +20,7 @@ export const Navbar = () => {
                     <li className="nav-item nav-options"><a className="nav-link text-white" href="/vote">Votaciones</a></li>
                     <li className="nav-item nav-options"><a className="nav-link text-white" href="/profile-check">Verificación de perfil</a></li>
                     <li className="nav-item nav-options"><a className="nav-link text-white" href="/gas-calculator">Calculador de costos</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-danger" href="/link-address">Vincular cuenta</a></li>
                 </ul>
                 </div>
             </div>

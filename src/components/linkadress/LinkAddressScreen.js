@@ -93,10 +93,10 @@ export const LinkAddressScreen = () => {
                     <form onSubmit={ addWallet } >
                         <div className="row">
                             <div className="col-xs-12 col-md-8 col-lg-8">
-                                    <input type="text" className="form-control mt-3" placeholder="{t('urlwallet')}" name="wallet" value={ wallet } onChange={ handleWalletInputChange } />
+                                    <input type="text" className="form-control mt-3" placeholder={t('urlwallet')} name="wallet" value={ wallet } onChange={ handleWalletInputChange } />
                             </div>
                             <div className="col-xs-12 col-md-4 col-lg-4">
-                                    <input type="submit" className="btn btn-outline-warning mt-3 w-100" value="{t('btn-wallet')}" />
+                                    <input type="submit" className="btn btn-outline-warning mt-3 w-100" value={t('btn-wallet')} />
                             </div>
                         </div>
                     </form>

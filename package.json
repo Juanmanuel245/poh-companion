@@ -15,7 +15,10 @@
     "react-scripts": "4.0.3",
     "react-select": "^4.3.0",
     "redux": "^4.0.5",
-    "web-vitals": "^1.1.1"
+    "web-vitals": "^1.1.1",
+    "i18next": "^20.2.1",
+    "i18next-http-backend": "^1.2.1",
+    "react-i18next": "^11.8.13"
   },
   "scripts": {
     "start": "react-scripts start",

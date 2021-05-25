@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
-
+import { useTranslation } from 'react-i18next';
 
 // import { gasPrices } from '../../helpers/fetch';
 
 export const GascalculatorScreen = () => {
-
+    const { t } = useTranslation(['gascalculator']);
     useEffect(() => {ReactGA.pageview('/gas-calculator');}, [])
 
 
@@ -26,7 +26,7 @@ export const GascalculatorScreen = () => {
 
     return (
         <div className="text-center">
-            <h2>Calculo de gastos para registro</h2>
+            <h2>{t('titulo')}</h2>
             <h6>En construcción...</h6>
 </div>
 

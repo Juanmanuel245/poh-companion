@@ -1,0 +1,9 @@
+{
+    "precio-cryptos": "Precio de Cryptos",
+    "precio-gas": "Precio del GAS (Gwei)",
+    "gas-rapid": "Mas Rápido",
+    "gas-fast": "Rápido",
+    "gas-normal": "Normal",
+    "gas-low": "Lento",
+    "gas-act-valores": "Los valores se actualizan automaticamente cada 8 segundos"
+}

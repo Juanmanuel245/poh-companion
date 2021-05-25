@@ -1,0 +1,11 @@
+{
+    "titulo" : "Verificación de perfil",
+    "desc" : "Selecciona tu video y el sistema te indicara si cumplis con las validaciones solicitadas",
+    "verificar-otro" : "Verificar otro video",
+    "duracion-ok" : "¡Duracion correcta!",
+    "size-ok" : "¡Tamaño correcto!",
+    "size-wrong" : "¡Tamaño incorrecto! Maximo 7 Megas.",
+    "format-ok" : "¡Formato correcto!",
+    "format-wrong" : "¡Formato incorrecto! El video debe ser mp4 o webm",
+    "dutacion-wrong" : "¡Duración incorrecta! Maximo 120 segundos."
+}

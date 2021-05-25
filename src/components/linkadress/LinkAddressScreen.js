@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { coinsPrices, ubiWallet } from '../../helpers/fetch';
 import { useForm } from '../../hooks/useForm';
 import ReactGA from 'react-ga';
+import { useTranslation } from 'react-i18next';
 
 export const LinkAddressScreen = () => {
-    
+    const { t } = useTranslation(['linkaddress']);
     const [ formWalletValues, handleWalletInputChange ] = useForm({wallet: ''});
     const { wallet } = formWalletValues;
     const [validWallet, setValidWallet] = useState(false);
@@ -78,11 +79,11 @@ export const LinkAddressScreen = () => {
         <div className="container mt-4">
             <div className="card mt-4">
                 <div className="card-body">
-                    <h4 className="text-center"> Vincular dirección de etherum </h4>
-                    <span className="text-center">Ingresa la direccion de tu billetera de etherum para que el sistema pueda calcular tus UBI´s. A tener en cuenta</span>
+                    <h4 className="text-center"> {t('titulo')}</h4>
+                    <span className="text-center">{t('desc')}</span>
                     <ul>
-                        <li>La direccion se guardara localmente en tu navegador</li>
-                        <li>La aplicacion no almacena ningun dato</li>
+                        <li>{t('li-1')}</li>
+                        <li>{t('li-2')}</li>
                     </ul>
                 </div>
             </div>
@@ -92,16 +93,13 @@ export const LinkAddressScreen = () => {
                     <form onSubmit={ addWallet } >
                         <div className="row">
                             <div className="col-xs-12 col-md-8 col-lg-8">
-                                    <input type="text" className="form-control mt-3" placeholder="Ingresa la url de tu billetera" name="wallet" value={ wallet } onChange={ handleWalletInputChange } />
+                                    <input type="text" className="form-control mt-3" placeholder="{t('urlwallet')}" name="wallet" value={ wallet } onChange={ handleWalletInputChange } />
                             </div>
                             <div className="col-xs-12 col-md-4 col-lg-4">
-                                    <input type="submit" className="btn btn-outline-warning mt-3 w-100" value="Cargar" />
+                                    <input type="submit" className="btn btn-outline-warning mt-3 w-100" value="{t('btn-wallet')}" />
                             </div>
                         </div>
                     </form>
-
-
-
                 )
             }
             
@@ -114,7 +112,7 @@ export const LinkAddressScreen = () => {
                             <div className="card">
                             <i className="fas fa-universal-access fa-5x mt-3"></i>
                                 <div className="card-body">
-                                    <h5 className="card-title">Precio de UBI</h5>
+                                    <h5 className="card-title">{t('ubi-price')}</h5>
                                     <p className="card-text"> U$S { ubiPrice }</p>
                                 </div>
                             </div>
@@ -123,7 +121,7 @@ export const LinkAddressScreen = () => {
                             <div className="card">
                             <i className="fas fa-balance-scale fa-5x mt-3"></i>
                                 <div className="card-body">
-                                    <h5 className="card-title">UBI´s en tu cuenta</h5>
+                                    <h5 className="card-title">{t('ubi-wallet')}</h5>
                                     <p className="card-text">{ ubiInWallet }</p>
                                 </div>
                             </div>
@@ -132,7 +130,7 @@ export const LinkAddressScreen = () => {
                             <div className="card">
                             <i className="fas fa-dollar-sign fa-5x mt-3"></i>
                                 <div className="card-body">
-                                    <h5 className="card-title">Valor en dolares</h5>
+                                    <h5 className="card-title">{t('ubi-dollar')}</h5>
                                     <p className="card-text"> U$S { (ubiInWallet * ubiPrice).toFixed(2) }</p>
                                 </div>
                             </div>
@@ -144,7 +142,7 @@ export const LinkAddressScreen = () => {
                             <div className="card">
                             <i className="fas fa-gas-pump fa-5x mt-3"></i>
                                 <div className="card-body">
-                                    <h5 className="card-title">Precio del gas (Rapido)</h5>
+                                    <h5 className="card-title">{t('gas')}</h5>
                                     <p className="card-text"> { gasFastPrice }</p>
                                 </div>
                             </div>
@@ -153,7 +151,7 @@ export const LinkAddressScreen = () => {
                             <div className="card">
                             <i className="fas fa-burn fa-5x mt-3"></i>
                                 <div className="card-body">
-                                    <h5 className="card-title">Gas usado para Unisewap V2</h5>
+                                    <h5 className="card-title">{t('gas-uniswap')}</h5>
                                     <p className="card-text"> 105.657 </p>
                                 </div>
                             </div>
@@ -162,7 +160,7 @@ export const LinkAddressScreen = () => {
                             <div className="card">
                             <i className="fas fa-file-invoice-dollar fa-5x mt-3"></i>
                                 <div className="card-body">
-                                    <h5 className="card-title">Costo de swap</h5>
+                                    <h5 className="card-title">{t('swap-cost')}</h5>
                                     <p className="card-text"> U$S { (((gasFastPrice * 105657) / 1000000000) * ethereumPrice).toFixed(2) }</p>
                                 </div>
                             </div>
@@ -170,7 +168,7 @@ export const LinkAddressScreen = () => {
                         <div className="col-xs-12 col-md-12 col-md-12 text-center mt-4">
                             <div className="card">
                                 <div className="card-body">
-                                    <h5 className="card-title">Ganancia total en caso de convertir</h5>
+                                    <h5 className="card-title">{t('ganancia')}</h5>
                                     <p className="card-text"> U$S {( (ubiInWallet * ubiPrice).toFixed(2) - (((gasFastPrice * 105657) / 1000000000) * ethereumPrice).toFixed(2)).toFixed(2) }</p>
                                 </div>
                             </div>
@@ -178,7 +176,7 @@ export const LinkAddressScreen = () => {
                         <div className="col-xs-12 col-md-12 col-md-12 text-center mt-4 mb-4">
                             <div className="card">
                                 <div className="card-body">
-                                    <button className="btn btn-outline-warning w-100" onClick={ clearWallet }> Limpiar wallet almacenada </button>
+                                    <button className="btn btn-outline-warning w-100" onClick={ clearWallet }> {t('clean')} </button>
                                 </div>
                             </div>
                         </div>

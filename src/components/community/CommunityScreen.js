@@ -2,13 +2,11 @@ import React, { useEffect } from 'react';
 import ReactGA from 'react-ga';
 import './community.css';
 import { Communities } from './communities.js';
-
+import { useTranslation } from 'react-i18next';
 
 export const CommunityScreen = () => {
+    const { t } = useTranslation(['community']);
     useEffect(() => {ReactGA.pageview('/community');}, [])
-
-    
-
 
     return (
         <div className="container">
@@ -16,8 +14,8 @@ export const CommunityScreen = () => {
             <div className="col-xs-12 col-md-12 col-md-12 mt-4">
                 <div className="card">
                     <div className="card-body text-center">
-                        <h2>Comunidades</h2>
-                        <h6>A continuación se detallan las comunidades creadas por la comundiad</h6> 
+                        <h2>{t('titulo')}</h2>
+                        <h6>{t('descripcion')}</h6> 
                     </div>
                 </div>
             </div>
@@ -32,7 +30,7 @@ export const CommunityScreen = () => {
                                 <div className="card-body">
                                     <h5 className="card-title">{ comunidad.name }</h5>
                                     <p className="card-text">{ comunidad.desc }</p>
-                                    <a href={comunidad.link} className="btn btn-outline-warning w-100">Ingresar</a>
+                                    <a href={comunidad.link} className="btn btn-outline-warning w-100">{t('btn-ingresar')}</a>
                                 </div>
                             </div>
                         </div>

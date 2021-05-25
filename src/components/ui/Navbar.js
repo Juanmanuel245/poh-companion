@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react';
 import './navbar.css';    
 import ReactGA from 'react-ga';
+import { useTranslation } from 'react-i18next';
 
 export const Navbar = () => {
-
+    const { t } = useTranslation(['navbar']);
     useEffect(() => {ReactGA.initialize('UA-197549218-1');}, []);
 
     return (
@@ -15,12 +16,12 @@ export const Navbar = () => {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ">
-                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/">Inicio</a></li>
-                    <li className="nav-item nav-options"><a className="nav-link text-white" href="community">Comunidad</a></li>
-                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/vote">Votaciones</a></li>
-                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/profile-check">Verificación de perfil</a></li>
-                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/gas-calculator">Calculador de costos</a></li>
-                    <li className="nav-item nav-options"><a className="nav-link text-danger" href="/link-address">Vincular cuenta</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/">{t('inicio')}</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="community">{t('comunidad')}</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/vote">{t('votaciones')}</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/profile-check">{t('verificarperfil')}</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-white" href="/gas-calculator">{t('calculadorcostos')}</a></li>
+                    <li className="nav-item nav-options"><a className="nav-link text-danger" href="/link-address">{t('vincularcuenta')}</a></li>
                 </ul>
                 </div>
             </div>

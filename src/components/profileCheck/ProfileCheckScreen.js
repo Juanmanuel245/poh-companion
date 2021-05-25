@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ReactGA from 'react-ga';
 import './profileCheck.css';
-
+import { useTranslation } from 'react-i18next';
 
 export const ProfileCheckScreen = () => {
-
+    const { t } = useTranslation(['profilecheck']);
     useEffect(() => {ReactGA.pageview('/profile-check');}, [])
 
     const [video, setVideo] = useState();
@@ -18,15 +18,15 @@ export const ProfileCheckScreen = () => {
         let tam = ((e.target.files[0].size / 1024) / 1024).toFixed(2);
 
         if(tam <= 7){
-            setSize({size: tam, icon: 'far fa-thumbs-up text-success', text: '¡Tamaño correcto!' });
+            setSize({size: tam, icon: 'far fa-thumbs-up text-success', text: t('size-ok') });
         }else{
-            setSize({size: tam, icon: 'far fa-thumbs-down text-danger', text: '¡Tamaño incorrecto! Maximo 7 Megas.' });
+            setSize({size: tam, icon: 'far fa-thumbs-down text-danger', text: t('size-wrong')});
         }
 
         if(e.target.files[0].type === 'video/mp4' || e.target.files[0].type === 'video/webm'){
-            setType({size: tam, icon: 'far fa-thumbs-up text-success', text: '¡Formato correcto!' });
+            setType({size: tam, icon: 'far fa-thumbs-up text-success', text: t('format-ok')});
         }else{
-            setType({size: tam, icon: 'far fa-thumbs-down text-danger', text: '¡Formato incorrecto! El video debe ser mp4 o webm' });
+            setType({size: tam, icon: 'far fa-thumbs-down text-danger', text: t('format-wrong')});
         }
     };
 
@@ -43,11 +43,11 @@ export const ProfileCheckScreen = () => {
         }
 
         if(e.target.duration <= 120){
-            setDuration({ icon: 'far fa-thumbs-up text-success', text: '¡Duración correcta!' });
+            setDuration({ icon: 'far fa-thumbs-up text-success', text: t('duracion-ok')  });
         }else{
             setDuration({
                             icon: 'far fa-thumbs-down text-danger', 
-                            text: `¡Duración incorrecta! Maximo 120 segundos. (Tu video tiene ${e.target.duration.toFixed(2)} segundos)` 
+                            text: t('duracion-wrong') 
                         });
         }
     };
@@ -63,8 +63,8 @@ export const ProfileCheckScreen = () => {
             <div className="col-xs-12 col-md-12 col-md-12 mt-2">
                 <div className="card">
                     <div className="card-body text-center">
-                        <h2>Verificación de perfil</h2>
-                        <h6>Selecciona tu video y el sistema te indicara si cumplis con las validaciones solicitadas</h6>
+                        <h2>{t('titulo')}</h2>
+                        <h6>{t('desc')}</h6>
                     </div>
                 </div>
             </div>
@@ -111,7 +111,7 @@ export const ProfileCheckScreen = () => {
                                         <div className="animate__animated animate__fadeInDown animate__delay-3s"><i className={duration.icon}></i> {duration.text}</div>
                                         <div className="animate__animated animate__fadeInDown animate__delay-4s"><i className={type.icon}></i> {type.text}</div>
                                         <div className="animate__animated animate__fadeInDown animate__delay-5s mt-2">
-                                            <button className="btn btn-outline-secondary" onClick={ handleCleanVideo } >Verificar otro video</button>
+                                            <button className="btn btn-outline-secondary" onClick={ handleCleanVideo } >{t('verificar-otro')}</button>
                                         </div>
                                         </div>
                                     </div>

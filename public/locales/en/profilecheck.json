@@ -1,11 +1,11 @@
 {
-    "titulo" : "Verificación de perfil",
-    "desc" : "Selecciona tu video y el sistema te indicara si cumplis con las validaciones solicitadas",
-    "verificar-otro" : "Verificar otro video",
-    "duracion-ok" : "¡Duracion correcta!",
-    "size-ok" : "¡Tamaño correcto!",
-    "size-wrong" : "¡Tamaño incorrecto! Maximo 7 Megas.",
-    "format-ok" : "¡Formato correcto!",
-    "format-wrong" : "¡Formato incorrecto! El video debe ser mp4 o webm",
-    "dutacion-wrong" : "¡Duración incorrecta! Maximo 120 segundos."
+    "titulo" : "Profile checker",
+    "desc" : "Select your video and the system will check if it complies with the required standards",
+    "verificar-otro" : "Verify another video",
+    "duracion-ok" : "Correct duration!",
+    "size-ok" : "Correct size!",
+    "size-wrong" : "Incorrect size! 7 MB maximum",
+    "format-ok" : "Correct format!",
+    "format-wrong" : "Incorrect format! Video must be mp4 or webm",
+    "dutacion-wrong" : "Incorrect duration! 120 seconds maximum."
 }

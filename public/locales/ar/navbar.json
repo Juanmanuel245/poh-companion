@@ -1,8 +1,8 @@
 {
-    "inicio" : "Inicio",
-    "comunidad" : "Comunidad",
-    "votaciones" : "Votaciones",
-    "verificarperfil" : "Verificacion de perfil",
-    "calculadoracostos" : "Calculador de costos",
-    "vincularcuenta" : "Vincular cuenta"
+    "inicio" : "استقبال",
+    "comunidad" : "مجتمعات",
+    "votaciones" : "تصويتات",
+    "verificarperfil" : "التحقق من الملف الشخصي",
+    "calculadoracostos" : "حاسبة التكلفة",
+    "vincularcuenta" : "ربط الحساب"
 }

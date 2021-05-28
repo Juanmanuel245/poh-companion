@@ -1,8 +1,8 @@
 {
-    "inicio" : "Inicio",
-    "comunidad" : "Comunidad",
-    "votaciones" : "Votaciones",
-    "verificarperfil" : "Verificacion de perfil",
-    "calculadoracostos" : "Calculador de costos",
-    "vincularcuenta" : "Vincular cuenta"
+    "inicio" : "Accueil",
+    "comunidad" : "Communauté",
+    "votaciones" : "Votes",
+    "verificarperfil" : "Vérification de profil",
+    "calculadoracostos" : "Calculateur des coûts",
+    "vincularcuenta" : "Associer compte"
 }

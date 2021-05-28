@@ -1,11 +1,11 @@
 {
-    "titulo" : "Verificación de perfil",
-    "desc" : "Selecciona tu video y el sistema te indicara si cumplis con las validaciones solicitadas",
-    "verificar-otro" : "Verificar otro video",
-    "duracion-ok" : "¡Duracion correcta!",
-    "size-ok" : "¡Tamaño correcto!",
-    "size-wrong" : "¡Tamaño incorrecto! Maximo 7 Megas.",
-    "format-ok" : "¡Formato correcto!",
-    "format-wrong" : "¡Formato incorrecto! El video debe ser mp4 o webm",
-    "dutacion-wrong" : "¡Duración incorrecta! Maximo 120 segundos."
+    "titulo" : "التحقق من الملف الشخصي",
+    "desc" : "حدد مقطع الفيديو الخاص بك وسيخبرك النظام إذا كان يفي بالمعايير المطلوبة",
+    "verificar-otro" : "تحقق من مقطع فيديو آخر",
+    "duracion-ok" : "المدة صحيحة",
+    "size-ok" : "الحجم صحيح",
+    "size-wrong" : "الحجم خاطئ ! الحد الأقصى 7 ميغا بايت",
+    "format-ok" : "االنوع صحيح",
+    "format-wrong" : "mp4 أو webm نوع خاطئ! يجب أن يكون الفيديو بنوع ",
+    "dutacion-wrong" : "مدة غير صحيحة! الحد الأقصى 120 ثانية."
 }

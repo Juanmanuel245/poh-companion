@@ -1,3 +1,12 @@
 {
-    "titulo" : "Votación vigente"
+    "titulo" : "Votación vigente",
+    "titulo-desc" : "La información de la votación se mostrara únicamente en español. Pueden ver el idioma original de la misma desde el link oficial de la votación",
+    "descripcion" : "Descripción",
+    "motivacion" : "Motivación",
+    "btn-votar" : "Ir a la votación",
+    "votacion-finalizada" : "Votación finalizada",
+    "votacion-activa" : "Votación activa",
+    "voto-positivo" : "Positivo",
+    "voto-negativo" : "Negativo",
+    "resultado" : "Resultado"
 }

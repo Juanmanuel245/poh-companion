@@ -24,7 +24,7 @@ export const CommunityScreen = () => {
                 {
                     Communities.map(
                         comunidad => 
-                        <div className="col-xs-12 col-md-4 col-lg-3 mt-4">
+                        <div className="col-xs-12 col-md-4 col-lg-3 mt-4" key={comunidad.id }>
                             <div className="card text-center">
                                 <img src={ comunidad.logo } className="card-img-top img-rounded mt-2 align-self-center" alt="Proof of humanity - Español" />
                                 <div className="card-body">

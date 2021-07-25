@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { gasLottery } from '../../helpers/fetch';
+import React from 'react';
 
 export const ResumeLotteryScreen = () => {
 

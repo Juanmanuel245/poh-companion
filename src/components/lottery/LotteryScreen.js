@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
-import { gasLottery, pohDetails, txDetails } from '../../helpers/fetch';
+import { pohDetails, txDetails } from '../../helpers/fetch';
 import './lottery.css';
 
 export const LotteryScreen = () => {
@@ -8,8 +8,6 @@ export const LotteryScreen = () => {
   
   const [transactions, setTransactions] = useState([]);
   const [winner, setWinner] = useState(null);
-  const [ubiBurn, setUbiBurn] = useState(0);
-  const [ticketsBuy, setTicketsBuy] = useState(0);
   const delay = ms => new Promise(res => setTimeout(res, ms));
   const symbol = 'UBI';
   const burnWallet = '0x000000000000000000000000000000000000dead';

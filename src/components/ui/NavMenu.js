@@ -19,7 +19,7 @@ export const NavMenu = () => {
               <Nav.Link href="/newsletter">Newsletter</Nav.Link>
               <Nav.Link href="community">{t('comunidad')}</Nav.Link>
               {/* <Nav.Link href="/vote">{t('votaciones')}</Nav.Link>  */}
-              {/* <Nav.Link href="/lottery">Loteria UBI</Nav.Link>  */}
+              <Nav.Link href="/lottery">Loteria UBI</Nav.Link> 
               <NavDropdown   title={t('herramientas')} id="collasible-nav-dropdown">
                 <NavDropdown.Item href="/profile-check">{t('verificarperfil')}</NavDropdown.Item>
                 <NavDropdown.Item href="/gas-calculator">{t('calculadorcostos')}</NavDropdown.Item>

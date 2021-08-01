@@ -11,6 +11,8 @@ export const LotteryScreen = () => {
   const delay = ms => new Promise(res => setTimeout(res, ms));
   const symbol = 'UBI';
   const burnWallet = '0x000000000000000000000000000000000000dead';
+  const ticketPrice = 100;
+  
 
   const handleFileUpload = e => {
 
@@ -58,7 +60,7 @@ export const LotteryScreen = () => {
                 'wallet' : item.wallet,
                 'date' : item.date,
                 'amount' : item.amount,
-                'tickets' : (item.amount/10).toFixed(0)
+                'tickets' : (item.amount/ticketPrice).toFixed(0)
             });
         }
     }
@@ -72,28 +74,33 @@ export const LotteryScreen = () => {
     const transacciones = body.result;
     const tx = [];
 
-    // 1 - Reviso que sean transacciones de UBI y a la wallet indicada
+    if(transacciones === 'Error! Invalid address format'){
+      console.log("Wallet invalida");
+    }else{
     transacciones.forEach(e => {
-        if(symbol === e.tokenSymbol && burnWallet === e.to){
-          let validMonth = new Date().getMonth();
-          let validYear = new Date().getFullYear();
-          let txDate = new Date(1000*e.timeStamp);
+      if(symbol === e.tokenSymbol && burnWallet === e.to){
+        let validMonth = new Date().getMonth();
+        let validYear = new Date().getFullYear();
+        let txDate = new Date(1000*e.timeStamp);
 
-          if(validYear === txDate.getFullYear() && validMonth === txDate.getMonth()){
-            // Si entro aca significa que la wallet de quemado, el simbolo y la fecha son validos
-            let amount = e.value / 1000000000000000000;
-            tx.push({
-              'id' : e.blockHash,
-              'wallet' : e.from,
-              'date' : new Date(1000 * e.timeStamp).toUTCString() ,
-              'amount' : amount,
-              'tickets' : (amount/10)
-            })
+        if(validYear === txDate.getFullYear() && validMonth === txDate.getMonth()){
+          // Si entro aca significa que la wallet de quemado, el simbolo y la fecha son validos
+          let amount = e.value / 1000000000000000000;
+          tx.push({
+            'id' : e.blockHash,
+            'wallet' : e.from,
+            'date' : new Date(1000 * e.timeStamp).toUTCString() ,
+            'amount' : amount,
+            'tickets' : (amount/ticketPrice)
+          })
 
-          }
-          
         }
-    });
+        
+      }
+  });
+    }
+
+    
 
     return tx;
   };

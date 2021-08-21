@@ -3,6 +3,7 @@ import { coinsPrices, ubiWallet } from '../../helpers/fetch';
 import { useForm } from '../../hooks/useForm';
 import ReactGA from 'react-ga';
 import { useTranslation } from 'react-i18next';
+import '../../app.css';
 
 export const LinkAddressScreen = () => {
     const { t } = useTranslation(['linkaddress']);
@@ -77,7 +78,7 @@ export const LinkAddressScreen = () => {
     
     return (
         <div className="container mt-4">
-            <div className="card mt-4">
+            <div className="poh-card mt-4">
                 <div className="card-body">
                     <h4 className="text-center"> {t('titulo')}</h4>
                     <span className="text-center">{t('desc')}</span>
@@ -109,7 +110,7 @@ export const LinkAddressScreen = () => {
                     <>
                     <div className="row">
                         <div className="col-xs-12 col-md-4 col-md-4 text-center mt-4">
-                            <div className="card">
+                            <div className="poh-card">
                             <i className="fas fa-universal-access fa-5x mt-3"></i>
                                 <div className="card-body">
                                     <h5 className="card-title">{t('ubi-price')}</h5>
@@ -118,7 +119,7 @@ export const LinkAddressScreen = () => {
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-4 col-md-4 text-center mt-4">
-                            <div className="card">
+                            <div className="poh-card">
                             <i className="fas fa-balance-scale fa-5x mt-3"></i>
                                 <div className="card-body">
                                     <h5 className="card-title">{t('ubi-wallet')}</h5>
@@ -127,7 +128,7 @@ export const LinkAddressScreen = () => {
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-4 col-md-4 text-center mt-4">
-                            <div className="card">
+                            <div className="poh-card">
                             <i className="fas fa-dollar-sign fa-5x mt-3"></i>
                                 <div className="card-body">
                                     <h5 className="card-title">{t('ubi-dollar')}</h5>
@@ -139,7 +140,7 @@ export const LinkAddressScreen = () => {
 
                     <div className="row">
                         <div className="col-xs-12 col-md-4 col-md-4 text-center mt-4">
-                            <div className="card">
+                            <div className="poh-card">
                             <i className="fas fa-gas-pump fa-5x mt-3"></i>
                                 <div className="card-body">
                                     <h5 className="card-title">{t('gas')}</h5>
@@ -148,7 +149,7 @@ export const LinkAddressScreen = () => {
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-4 col-md-4 text-center mt-4">
-                            <div className="card">
+                            <div className="poh-card">
                             <i className="fas fa-burn fa-5x mt-3"></i>
                                 <div className="card-body">
                                     <h5 className="card-title">{t('gas-uniswap')}</h5>
@@ -157,7 +158,7 @@ export const LinkAddressScreen = () => {
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-4 col-md-4 text-center mt-4">
-                            <div className="card">
+                            <div className="poh-card">
                             <i className="fas fa-file-invoice-dollar fa-5x mt-3"></i>
                                 <div className="card-body">
                                     <h5 className="card-title">{t('swap-cost')}</h5>
@@ -166,7 +167,7 @@ export const LinkAddressScreen = () => {
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-12 col-md-12 text-center mt-4">
-                            <div className="card">
+                            <div className="poh-card">
                                 <div className="card-body">
                                     <h5 className="card-title">{t('ganancia')}</h5>
                                     <p className="card-text"> U$S {( (ubiInWallet * ubiPrice).toFixed(2) - (((gasFastPrice * 105657) / 1000000000) * ethereumPrice).toFixed(2)).toFixed(2) }</p>
@@ -174,7 +175,7 @@ export const LinkAddressScreen = () => {
                             </div>
                         </div>
                         <div className="col-xs-12 col-md-12 col-md-12 text-center mt-4 mb-4">
-                            <div className="card">
+                            <div className="poh-card">
                                 <div className="card-body">
                                     <button className="btn btn-outline-warning w-100" onClick={ clearWallet }> {t('clean')} </button>
                                 </div>

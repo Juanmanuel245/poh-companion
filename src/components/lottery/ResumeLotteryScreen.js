@@ -1,10 +1,10 @@
 import React from 'react';
-
+import '../../app.css';
 export const ResumeLotteryScreen = () => {
 
     return (
         <div className="container mt-4">
-            <div className="card mt-4">
+            <div className="poh-card mt-4">
               <div className="card-body">
               <h3 className="text-center"> UBI Lottery </h3>
               </div>
@@ -12,7 +12,7 @@ export const ResumeLotteryScreen = () => {
 
             <div className="mt-4 row">
               <div className="col-xs-12 col-md-6 col-lg-6">
-                <div className="card">
+                <div className="poh-card">
                     <div className="card-body">
                       <h3 className="text-center"> ¿Qué es?  </h3>
                       <span>
@@ -24,7 +24,7 @@ Para esto, se realizan sorteos mensuales, dónde para participar, se exige la qu
               </div>
 
               <div className="col-xs-12 col-md-6 col-lg-6">
-                <div className="card">
+                <div className="poh-card">
                   <div className="card-body">
                     <h3 className="text-center"> ¿Cómo funciona? </h3>
                     <span>
@@ -37,7 +37,7 @@ Para esto, se realizan sorteos mensuales, dónde para participar, se exige la qu
             </div>
             <div className="mt-4 row">
               <div className="col-xs-12 col-md-6 col-lg-6">
-                <div className="card">
+                <div className="poh-card">
                     <div className="card-body">
                       <h3 className="text-center"> ¿Cómo se entregan los premios?  </h3>
                       <span>
@@ -48,7 +48,7 @@ Para esto, se realizan sorteos mensuales, dónde para participar, se exige la qu
               </div>
 
               <div className="col-xs-12 col-md-6 col-lg-6">
-                <div className="card">
+                <div className="poh-card">
                   <div className="card-body">
                     <h3 className="text-center"> ¿Porque se hace esto?  </h3>
                     <span>
@@ -62,7 +62,7 @@ Para esto, se realizan sorteos mensuales, dónde para participar, se exige la qu
     
             <div className="mt-4 mb-4 row">
               <div className="col-xs-12 col-md-12 col-lg-12">
-                <div className="card">
+                <div className="poh-card">
                     <div className="card-body">
                       <h3 className="text-center"> ¿Quién puede participar? </h3>
                       <span>
@@ -76,7 +76,7 @@ Para esto, se realizan sorteos mensuales, dónde para participar, se exige la qu
 
             <div className="mt-4 mb-4 row">
               <div className="col-xs-12 col-md-12 col-lg-12">
-                <div className="card">
+                <div className="poh-card">
                     <div className="card-body">
                       <h3 className="text-center"> Estado del proyecto </h3>
                       <span>

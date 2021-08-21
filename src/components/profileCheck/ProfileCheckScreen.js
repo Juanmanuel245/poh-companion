@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ReactGA from 'react-ga';
 import './profileCheck.css';
 import { useTranslation } from 'react-i18next';
+import '../../app.css';
 
 export const ProfileCheckScreen = () => {
     const { t } = useTranslation(['profilecheck']);
@@ -31,7 +32,7 @@ export const ProfileCheckScreen = () => {
     };
 
     const onLoadMetadata = e => {
-        if(e.target.videoHeight >= 360 && e.target.videoWidth >= 360){
+        if(e.target.videoHeight >= 352 && e.target.videoWidth >= 352){
             setDimension({ 
                             icon: 'far fa-thumbs-up text-success', 
                             text: '¡Dimensiones correctas!' });
@@ -60,8 +61,8 @@ export const ProfileCheckScreen = () => {
 
     return (
         <div className="container">
-            <div className="col-xs-12 col-md-12 col-md-12 mt-2">
-                <div className="card">
+            <div className="col-xs-12 col-md-12 col-md-12 mt-3">
+                <div className="poh-card">
                     <div className="card-body text-center">
                         <h2>{t('titulo')}</h2>
                         <h6>{t('desc')}</h6>
@@ -72,8 +73,8 @@ export const ProfileCheckScreen = () => {
             {
                 !video &&
                 (
-                    <div className="col-xs-12 col-md-12 col-md-12 mt-2">
-                        <div className="card">
+                    <div className="col-xs-12 col-md-12 col-md-12 mt-3">
+                        <div className="poh-card">
                             <div className="card-body text-center">
                                 <input type="file" onChange={ onChangeVideo } />
                             </div>
@@ -89,8 +90,8 @@ export const ProfileCheckScreen = () => {
                 (
                     <div className="row">
 
-                        <div className="col-xs-12 col-md-6 col-lg-9 mt-2">
-                            <div className="card">
+                        <div className="col-xs-12 col-md-6 col-lg-9 mt-3">
+                            <div className="poh-card">
                                 <div className="card-body text-center">
                                     <video width="30%" onLoadedMetadata={e => onLoadMetadata(e) }>
                                         <source src={URL.createObjectURL(video)} type="video/mp4" />
@@ -103,8 +104,8 @@ export const ProfileCheckScreen = () => {
                         {
                             dimension && 
                             (
-                                <div className="col-xs-12 col-md-6 col-lg-3 mt-2">
-                                    <div className="card">
+                                <div className="col-xs-12 col-md-6 col-lg-3 mt-3">
+                                    <div className="poh-card">
                                         <div className="card-body">
                                         <div className="animate__animated animate__fadeInDown animate__delay-1s"><i className={dimension.icon}></i> {dimension.text} </div>
                                         <div className="animate__animated animate__fadeInDown animate__delay-2s"><i className={size.icon}></i> {size.text}</div>

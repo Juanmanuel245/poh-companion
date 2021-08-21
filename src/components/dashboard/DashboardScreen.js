@@ -3,6 +3,7 @@ import { coinsPrices } from '../../helpers/fetch';
 import './dashboard.css';
 import ReactGA from 'react-ga';
 import { useTranslation } from 'react-i18next';
+import '../../app.css';
 
 export const DashboardScreen = () => {
     const { t } = useTranslation(['dashboard']);
@@ -59,13 +60,13 @@ export const DashboardScreen = () => {
     return (
         <div className="container">
             <div className="row text-center">
-                <div className="col-xs-12 col-md-12 col-md-12 mt-4 mb-4">
-                    <div className="card">
-                        <div className="card-body"> {t('precio-cryptos')} </div>
+                <div className="col-xs-12 col-md-12 col-md-12 mt-4 mb-4 ">
+                    <div className="poh-card">
+                        <div className="card-body "> {t('precio-cryptos')} </div>
                     </div>
                 </div>
-                <div className="col-xs-12 col-md-4 col-md-4">
-                    <div className="card">
+                <div className="col-xs-12 col-md-4 col-md-4 mt-3">
+                    <div className="poh-card">
                     <i className="fab fa-bitcoin fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">Bitcoin (BTC)</h5>
@@ -74,8 +75,8 @@ export const DashboardScreen = () => {
                     </div>
                 </div>
 
-                <div className="col-xs-12 col-md-4 col-md-4">
-                    <div className="card">
+                <div className="col-xs-12 col-md-4 col-md-4 mt-3">
+                    <div className="poh-card">
                     <i className="fab fa-ethereum fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">Ethereum (ETH)</h5>
@@ -84,8 +85,8 @@ export const DashboardScreen = () => {
                     </div>
                 </div>
 
-                <div className="col-xs-12 col-md-4 col-md-4">
-                    <div className="card">
+                <div className="col-xs-12 col-md-4 col-md-4 mt-3">
+                    <div className="poh-card">
                     <i className="fas fa-universal-access fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">UBI</h5>
@@ -95,13 +96,13 @@ export const DashboardScreen = () => {
                 </div>
             </div>
             <div className="row text-center">
-                <div className="col-xs-12 col-md-12 col-md-12 mt-5 mb-4">
-                    <div className="card">
+                <div className="col-xs-12 col-md-12 col-md-12 mt-5 mb-4 mt-3">
+                    <div className="poh-card">
                         <div className="card-body"> {t('precio-gas')} </div>
                     </div>
                 </div>
-                <div className="col-xs-12 col-md-3 col-md-3">
-                    <div className="card">
+                <div className="col-xs-12 col-md-3 col-md-3 mt-3">
+                    <div className="poh-card">
                     <i className="fas fa-rocket fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">{t('gas-rapid')}</h5>
@@ -110,8 +111,8 @@ export const DashboardScreen = () => {
                     </div>
                 </div>
 
-                <div className="col-xs-12 col-md-3 col-md-3 ">
-                    <div className="card">
+                <div className="col-xs-12 col-md-3 col-md-3  mt-3">
+                    <div className="poh-card">
                         <i className="fas fa-fighter-jet fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">{t('gas-fast')}</h5>
@@ -120,8 +121,8 @@ export const DashboardScreen = () => {
                     </div>
                 </div>
 
-                <div className="col-xs-12 col-md-3 col-md-3">
-                    <div className="card">
+                <div className="col-xs-12 col-md-3 col-md-3 mt-3">
+                    <div className="poh-card">
                         <i className="fas fa-car-alt fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">{t('gas-normal')}</h5>
@@ -130,8 +131,8 @@ export const DashboardScreen = () => {
                     </div>
                 </div>
 
-                <div className="col-xs-12 col-md-3 col-md-3">
-                    <div className="card">
+                <div className="col-xs-12 col-md-3 col-md-3 mt-3">
+                    <div className="poh-card">
                         <i className="fas fa-biking fa-5x mt-3"></i>
                         <div className="card-body">
                             <h5 className="card-title">{t('gas-low')}</h5>
@@ -139,8 +140,8 @@ export const DashboardScreen = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-xs-12 col-md-12 col-md-12 mt-4">
-                    <div className="card">
+                <div className="col-xs-12 col-md-12 col-md-12 mt-4 mt-3 mb-3">
+                    <div className="poh-card    ">
                         <div className="card-body"> {t('gas-act-valores')}</div>
                     </div>
                 </div>

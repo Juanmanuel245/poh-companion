@@ -7,6 +7,7 @@ import { useSelector } from 'react-redux';
 import Modal from 'react-modal';
 import './modal.css';
 import Swal from 'sweetalert2';
+import sponsor from './sinsponsor.png';
 
 export const CodexScreen = () => {
     const { t } = useTranslation(['codex']);
@@ -41,6 +42,9 @@ export const CodexScreen = () => {
     }
 
     const [modalState, setModalState] = useState(false);
+    const [modalOpenLink, setModalOpenLink] = useState(false);
+    const [codexModal, setCodexModal] = useState(null);
+    const [codexModalVote, setCodexModalVote] = useState('false');
 
     const customStyles = {
         content: { top: '50%', left: '50%', right: 'auto', bottom: 'auto', marginRight: '-50%', transform: 'translate(-50%, -50%)', },
@@ -53,16 +57,36 @@ export const CodexScreen = () => {
         setModalState(false);
     }
 
+    const handleOpenLink = ( id, link ) => {
+        window.open( link , "_blank");
+        fetchSinToken(`codex/${ id }/add-visit`,{},'GET');
+        setModalOpenLink(true);
+        setCodexModal(id);
+    }
+
+    const closeModalOpenLink = () => {
+        reset();
+        setModalOpenLink(false);
+        setCodexModal(null);
+        setCodexModalVote('false');
+    }
+
     const handleAddCodex = async e => {
         e.preventDefault();
         const resp = await fetchConToken('codex/add',{ title, author, source, link, meta  },'POST');
         const body = await resp.json();
         if(body.ok){
+            reset();
             setModalState(false);
             Swal.fire({icon: 'success', title: 'El instructivo se agrego con exito', showConfirmButton: false, timer: 1500})
         }else{
             Swal.fire('Error',body.msg, 'error');
         }
+    }
+
+    const handleAddVote = (id, type) => {
+        fetchSinToken(`codex/${ id }/add-vote`,{ type: type },'POST');
+        setCodexModalVote('true');
     }
     
 
@@ -113,11 +137,40 @@ export const CodexScreen = () => {
                 <div className="poh-card  mt-2 mb-2"  key={ i._id }>
                     <h5 className="card-title mt-1">{ i.title }</h5>
                     <h6 className="card-subtitle mb-2 text-muted">Author: {i.author} | Origen: { i.source } </h6>
-                    <a href={ i.link } target="_blank" rel="noreferrer">Ver instructivo</a>
+                    <button className="btn" onClick={ () => handleOpenLink( i._id, i.link )  } >Ver instructivo</button>
                 </div>
                 )}
                 </div>
         </div>
+
+        <Modal 
+            isOpen={ modalOpenLink } 
+            onRequestClose={ closeModalOpenLink } 
+            style={customStyles} 
+            contentLabel="Opinion de instructivo"
+            className="modal vote"
+            closeTimeoutMS={ 200 }
+            overlayClassName="vote-fondo"
+        >
+
+      <h3 className="text-center">¿Te sirvio el instructivo?</h3>
+            <hr />
+            <div className="row text-center">
+            { (codexModalVote === 'false') ?  
+                <>
+                <div>
+                    <button className="btn btn-outline-success mr-4" onClick={ () => handleAddVote( codexModal, 'positive' )  }><i className="far fa-thumbs-up fa-7x"></i></button>
+                    <button className="btn btn-outline-danger ml-4" onClick={ () => handleAddVote( codexModal, 'negative' )  }><i className="far fa-thumbs-down fa-7x"></i></button>
+                </div>
+                </>
+                :
+                <div className="text-center">¡Gracias por votar!</div>
+            }
+            <img className="mt-4" alt='Sponsor' src={sponsor} />
+            </div>
+            
+
+        </Modal>
 
         <Modal 
             isOpen={ modalState } 
@@ -127,8 +180,6 @@ export const CodexScreen = () => {
             className="modal"
             closeTimeoutMS={ 200 }
             overlayClassName="modal-fondo"
-        // onAfterOpen={afterOpenModal}
-        // modalState
         >
             <div className="scroll-component">
       <div className="scroll-content">

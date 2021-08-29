@@ -166,7 +166,7 @@ export const CodexScreen = () => {
                 :
                 <div className="text-center">¡Gracias por votar!</div>
             }
-            <img className="mt-4" alt='Sponsor' src={sponsor} />
+            <a href="https://t.me/Juan245" rel="noreferrer" target="_blank"><img className="mt-4" width="100%" alt='Sponsor' src={sponsor} /></a>
             </div>
             
 

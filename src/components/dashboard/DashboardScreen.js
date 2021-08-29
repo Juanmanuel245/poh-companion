@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { coinsPrices } from '../../helpers/fetch';
 import './dashboard.css';
 import ReactGA from 'react-ga';
 import { useTranslation } from 'react-i18next';
 import '../../app.css';
+import { coinsPrices } from "../../helpers/coingecko";
 
 export const DashboardScreen = () => {
     const { t } = useTranslation(['dashboard']);
@@ -31,7 +31,7 @@ export const DashboardScreen = () => {
     };
 
     wsObj = new WebSocket(wsUrl);
-    wsObj.onopen = (evt) => {console.log("Connection open ...");};
+    wsObj.onopen = (evt) => {};
 
     wsObj.onmessage = (evt) => {
     const dataStr = evt.data;
@@ -42,7 +42,7 @@ export const DashboardScreen = () => {
     }
     };
 
-    wsObj.onclose = (evt) => {console.log("Connection closed.");};
+    wsObj.onclose = (evt) => {};
 
     useEffect(() => {
         getCoinsPrices();

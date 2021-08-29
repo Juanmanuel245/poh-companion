@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import * as XLSX from 'xlsx';
-import { pohDetails, txDetails } from '../../helpers/fetch';
+import { txDetails } from '../../helpers/etherscan';
 import './lottery.css';
+import { pohDetails } from '../../helpers/poh';
 
 export const LotteryScreen = () => {
 
@@ -114,8 +115,6 @@ export const LotteryScreen = () => {
     });
     const winner = await pohDetails(lottery[random(0,lottery.length - 1).toFixed(0)]);
     const body = await winner.json();
-
-    console.log('Winner: ', body);
 
     if( body != null ){
       setWinner(body);

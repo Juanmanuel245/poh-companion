@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { coinsPrices, ubiWallet } from '../../helpers/fetch';
+import { ubiWallet } from '../../helpers/etherscan';
+import { coinsPrices } from "../../helpers/coingecko";
 import { useForm } from '../../hooks/useForm';
 import ReactGA from 'react-ga';
 import { useTranslation } from 'react-i18next';
